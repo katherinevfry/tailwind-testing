@@ -1,36 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import 'tailwindcss/tailwind.css';
 import './App.scss';
 
 function App() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
-
-  const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
-  };
-
   return (
     <div className='App'>
-      <h2>INSIDE APP COMPONENT</h2>
-      <div>
-        <button
-          id='this-button'
-          className='btn btn-info'
-          onClick={handleClick}
-        >
-          I am THIS button
-        </button>
+      <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <div className="px-6 py-4">
+        <div className="font-bold text-blue-500 text-xl mb-2">
+          Katy Fry
+        </div>
+        <p className="text-gray-700 text-base">This is some stuff about me. How cool</p>
       </div>
-      <div>
-        <button
-          id='that-button'
-          className='btn btn-primary mt-3'
-          onClick={handleClick}
-        >
-          I am THAT button
-        </button>
+      <div className="px-6 py-4">
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 animate-bounce">#cool</span>
       </div>
-      <h3>{domWriting}</h3>
+      </div>
     </div>
   );
 }
